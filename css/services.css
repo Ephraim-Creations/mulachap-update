@@ -1,0 +1,355 @@
+/* Services Page Styles */
+/* Breadcrumb */
+.breadcrumb {
+    padding: 20px 30px;
+    font-size: 0.9rem;
+    color: var(--neutral-mid);
+}
+
+.breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary);
+}
+
+.breadcrumb i {
+    margin: 0 10px;
+    font-size: 0.8rem;
+}
+
+/* Services Hero Section */
+.services-hero {
+    padding: 150px 0 80px;
+    background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    min-height: 40vh;
+}
+
+.services-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.services-hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Services Overview */
+.services-overview {
+    padding: 80px 0;
+    background: var(--neutral-light);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background: var(--primary);
+    transition: var(--transition);
+}
+
+.service-card:hover::before {
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 109, 91, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.service-icon i {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.service-card p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-card ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.service-card li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 5px;
+}
+
+.service-card li::before {
+    content: '•';
+    color: var(--secondary);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Service Details Sections */
+.service-details {
+    padding: 80px 0;
+}
+
+.service-details.alt {
+    background: var(--neutral-light);
+}
+
+.detail-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.detail-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.detail-text {
+    flex: 1;
+}
+
+.detail-text h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.detail-text > p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.detail-image {
+    flex: 1;
+}
+
+.detail-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.feature-list {
+    margin-bottom: 30px;
+}
+
+.feature-list h4 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.feature-list ul {
+    padding-left: 20px;
+}
+
+.feature-list li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.feature-list strong {
+    color: var(--primary);
+}
+
+.benefits {
+    margin-top: 30px;
+}
+
+.benefits h4 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(0, 109, 91, 0.05);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.benefit-item:hover {
+    background: rgba(0, 109, 91, 0.1);
+    transform: translateY(-3px);
+}
+
+.benefit-item i {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.benefit-item span {
+    font-weight: 500;
+}
+
+.process {
+    margin-top: 30px;
+}
+
+.process h4 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.process-steps {
+    display: grid;
+    gap: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content h5 {
+    color: var(--primary);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.step-content p {
+    color: var(--neutral-mid);
+    line-height: 1.6;
+}
+
+/* Services CTA */
+.services-cta {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.644)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+.services-cta h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.services-cta p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .detail-content,
+    .detail-content.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .detail-image,
+    .detail-text {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
