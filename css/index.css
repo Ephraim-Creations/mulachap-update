@@ -2,7 +2,7 @@
     --primary: #006D5B;
     --secondary: #D4AF37;
     --neutral-light: #F7F7F5;
-    --neutral-mid: #708090;
+    --neutral-mid: lab(52.84% -2.14 -10.58);
     --neutral-dark: #000000ec;
     --text: #333333;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.548);
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
     background-color: white;
     box-shadow: var(--shadow);
-    position: fixed;
+    position:fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
