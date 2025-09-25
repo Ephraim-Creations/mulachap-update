@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- SEO Title -->
   <title>Mulachap Loan Consultancy | Mortgage, Business & Personal Loan Experts</title>
@@ -21,7 +21,7 @@
   <meta property="og:type" content="website" />
 
   <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
 
   <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -29,6 +29,8 @@
 
   <!-- Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/index.css">
@@ -40,17 +42,17 @@
     <!-- Header -->
     <header>
         <div class="header-container container">
-           <a href="/" style="text-decoration: none;"> <div class="logo"> <img src="/images/favicon.png" alt="">Mulachap<span style="color:var(--secondary)"> Ventures</span></div></a>
+           <a href="/" style="text-decoration: none;"> <div class="logo"> <img src="images/favicon.png" alt="">Mulachap<span style="color:var(--secondary)"> Ventures</span></div></a>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/services/">Services</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/book-online/">Book Online</a></li>
-                <li><a href="/contact-us/">Contact</a></li>
+                <li><a href="./">Home</a></li>
+                <li><a href="about/">About</a></li>
+                <li><a href="services/">Services</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="book-online/">Book Online</a></li>
+                <li><a href="contact-us/">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -293,21 +295,21 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about/index.html">About Us</a></li>
-                        <li><a href="services/index.html">Services</a></li>
-                        <li><a href="blog/index.html">Blog</a></li>
-                        <li><a href="contact-us/index.html">Contact</a></li>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="about/">About Us</a></li>
+                        <li><a href="services/">Services</a></li>
+                        <li><a href="blog/">Blog</a></li>
+                        <li><a href="contact-us/">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="/services/">Mortgage Loans</a></li>
-                        <li><a href="/services/">Business Loans</a></li>
-                        <li><a href="/services/">Personal Loans</a></li>
-                        <li><a href="/services/">Debt Consolidation</a></li>
-                        <li><a href="/services/">Loan Refinancing</a></li>
+                        <li><a href="services/">Mortgage Loans</a></li>
+                        <li><a href="services/">Business Loans</a></li>
+                        <li><a href="services/">Personal Loans</a></li>
+                        <li><a href="services/">Debt Consolidation</a></li>
+                        <li><a href="services/">Loan Refinancing</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -326,44 +328,52 @@
       </div>
     </div>
     </footer>
- <!-- WhatsApp Widget -->
-<div class="whatsapp-widget">
+    
+<!-- WhatsApp Widget -->
+<!-- Floating WhatsApp Icon -->
+<div id="whatsapp-float" data-aos="pulse" data-aos-duration="1200" data-aos-delay="200" data-aos-easing="ease-in-out">
+  <i class="fab fa-whatsapp"></i>
+</div>
+
+<!-- WhatsApp Widget -->
+<div class="whatsapp-widget" id="whatsapp-widget">
   <div class="widget-header">
     <div class="profile-info">
-      <img src="../../../assets/images/Eph icon.png" alt="Ephraim Mutwiri" class="profile-img">
+      <img src="images/favicon.png" alt="Mulachap Ventures" class="profile-img">
       <div>
-        <div class="profile-name">Ephraim Mutwiri</div>
-        <div class="profile-status">Typically replies within a day</div>
+        <div class="profile-name">Mulachap Ventures</div>
+        <div class="profile-status">Loan Consultant • Available</div>
       </div>
     </div>
     <div class="header-actions">
-      <span class="time" id="live-time">17:07 EAT</span>
-      <button class="close-btn">×</button>
+      <span class="time" id="live-time">--:-- EAT</span>
+      <button class="close-btn" id="close-widget">×</button>
     </div>
   </div>
 
   <!-- Message bubble styled as sent message -->
   <div class="message-bubble yours">
-    <p>Your business deserves to show up!</p>
-    <p>Let's improve your online visibility </p>
+    <p>Need a loan consultation?</p>
+    <p>We help you access the best financing options.</p>
     <br>
-     <p>Lets Chat your way up...</p>  
+    <p>Let’s discuss your needs...</p>
     <div class="message-meta">
-      <span class="message-time">17:07</span>
+      <span class="message-time">--:--</span>
       <i class="fas fa-check-double"></i>
     </div>
   </div>
 
-
-  <a href="https://wa.me/254112268873?text=Hi%20Ephraim%2C%20I%20just%20visited%20your%20website%20and%20I%27d%20love%20to%20discuss%20how%20we%20can%20improve%20my%20online%20visibility.%20I%27m%20particularly%20interested%20in..."
-     class="whatsapp-btn">
+  <a href="https://wa.me/254741699953?text=Hi%20Mulachap%20Ventures%2C%20I%20need%20a%20loan%20consultation.%20Could%20you%20help%20me%20with..."
+     target="_blank" class="whatsapp-btn">
     <i class="fab fa-whatsapp"></i> Start Chat
   </a>
 </div>
+
 <!-- Back to Top Button -->
 <button id="backToTop" title="Back to Top">
-    <i class="fas fa-arrow-up"></i>
+  <i class="fas fa-arrow-up"></i>
 </button>
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/index.js"></script>

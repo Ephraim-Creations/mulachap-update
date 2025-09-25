@@ -82,5 +82,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//header scroll effect
+let lastScrollY = window.scrollY;
+const header = document.querySelector("header");
 
-
+window.addEventListener("scroll", () => {
+  if (window.scrollY > lastScrollY) {
+    // Scrolling down → hide header
+    header.classList.add("hide");
+  } else {
+    // Scrolling up → show header
+    header.classList.remove("hide");
+  }
+  lastScrollY = window.scrollY;
+});
