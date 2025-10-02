@@ -47,14 +47,3 @@
                     }
                 });
             });
-
-            // Scroll indicator click
-            const scrollIndicator = document.querySelector('.scroll-indicator');
-            if (scrollIndicator) {
-                scrollIndicator.addEventListener('click', function() {
-                    window.scrollTo({
-                        top: document.querySelector('.terms-main').offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                });
-            }

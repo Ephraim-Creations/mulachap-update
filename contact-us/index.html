@@ -17,16 +17,16 @@
   <meta property="og:type" content="website" />
 
   <!-- Favicon -->
-  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
   <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/contact.css">
-  <link rel="stylesheet" href="../css/whatsapp-backtop.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/contact.css">
+  <link rel="stylesheet" href="/css/whatsapp-backtop.css">
 </head>
 <body>
     <!-- Header -->
@@ -37,7 +37,7 @@
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-menu">
-                <li><a href="./">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="about/">About</a></li>
                 <li><a href="services/">Services</a></li>
                 <li><a href="blog/">Blog</a></li>
@@ -87,16 +87,15 @@
             
             <div class="form-group">
               <label for="subject">Subject</label>
-              <select id="subject" name="subject">
-                <option value="">Select a subject</option>
-                <option value="mortgage">Mortgage Loan Inquiry</option>
-                <option value="business">Business Loan Inquiry</option>
-                <option value="personal">Personal Loan Inquiry</option>
-                <option value="debt">Debt Consolidation</option>
-                <option value="refinancing">Loan Refinancing</option>
-                <option value="general">General Information</option>
-                <option value="other">Other</option>
-              </select>
+              <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option value="Asset financing">Asset Financing</option>
+              <option value="Logbook loans">Logbook Loans</option>
+              <option value="Loan buy-offs">Loan Buy-offs</option>
+              <option value="Import financing">Import Financing</option>
+              <option value="Payslips loans">Payslips Loans</option>
+              <option value="LPO financing">LPO Financing</option>
+             </select>
             </div>
             
             <div class="form-group">
@@ -237,6 +236,8 @@
             <li><a href="/services/">Services</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/contact-us/">Contact</a></li>
+            <li><a href="/privacy-policy/">Privacy</a></li>
+            <li><a href="/terms-of-service/">Terms of use</a></li>
           </ul>
         </div>
         <div class="footer-column">

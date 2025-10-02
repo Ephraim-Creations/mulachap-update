@@ -1,364 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Mulachap Ventures - Loan Consultancy Services</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mulachap Ventures</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/whatsapp-backtop.css">
-  <style>
-    :root {
-        --primary: #006D5B;
-        --secondary: #D4AF37;
-        --neutral-light: #F7F7F5;
-        --neutral-mid: lab(52.84% -2.14 -10.58);
-        --neutral-dark: #000000ec;
-        --text: #333333;
-        --shadow: 0 4px 6px rgba(0, 0, 0, 0.548);
-        --transition: all 0.3s ease;
-    }
+    <link rel="stylesheet" href="/css/blog.css">
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Open Sans', sans-serif;
-        line-height: 1.6;
-        color: var(--text);
-        background: white;
-    }
-
-    .container {
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    /* Header Styles */
-
-
-header.hide {
-  transform: translateY(-100%);
-}
-    header {
-        background: rgba(0, 109, 91, 0.95);
-        backdrop-filter: blur(20px);
-        padding: 1rem 0;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        transition: var(--transition);
-    }
-
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: white;
-    }
-
-    .logo img {
-        height: 50px;
-        width: auto;
-        margin-right: 10px;
-        border-radius: 8px;
-    }
-
-    .nav-menu {
-        display: flex;
-        list-style: none;
-        gap: 0rem;
-    }
-
-    .nav-menu a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        transition: var(--transition);
-        padding: 0.5rem 1rem;
-        border-radius: 25px;
-    }
-
-    .nav-menu a:hover {
-        background: rgba(212, 175, 55, 0.2);
-        color: var(--secondary);
-    }
-
-    .hamburger {
-        display: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
-    /* Hero Section Styles */
-    .hero {
-        background: linear-gradient(135deg, var(--primary) 0%, #004d3d 100%);
-        min-height: 100vh;
-        position: relative;
-        overflow: hidden;
-        color: white;
-        display: flex;
-        align-items: center;
-        margin-top: 80px;
-    }
-
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.1"><polygon points="100,100 200,50 300,100 400,50 500,100 600,50 700,100 800,50 900,100 1000,50 1000,150 900,200 800,150 700,200 600,150 500,200 400,150 300,200 200,150 100,200 0,150 0,50" fill="white"/></svg>');
-        animation: float 20s infinite linear;
-    }
-
-    @keyframes float {
-        0% { transform: translateY(0px) translateX(0px); }
-        100% { transform: translateY(-100px) translateX(-100px); }
-    }
-
-    .hero-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-    }
-
-    .hero-text h1 {
-        font-size: 3.5rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(45deg, #fff, var(--neutral-light));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
-    }
-
-    .hero-text p {
-        font-size: 1.3rem;
-        margin-bottom: 2.5rem;
-        opacity: 0.9;
-        line-height: 1.6;
-    }
-
-    .hero-buttons {
-        display: flex;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-    }
-
-    .btn {
-        padding: 15px 30px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: var(--transition);
-        border: none;
-        cursor: pointer;
-        font-size: 1.1rem;
-        text-align: center;
-        display: inline-block;
-    }
-
-    .btn-primary {
-        background: linear-gradient(45deg, var(--primary), var(--secondary));
-        color: white;
-    }
-
-    .btn-primary:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(0, 109, 91, 0.4);
-    }
-
-    .btn-secondary {
-        background: transparent;
-        color: white;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .btn-secondary:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: var(--secondary);
-    }
-
-    .hero-image {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero-image-content {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(20px);
-        border-radius: 30px;
-        padding: 3rem;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hero-image img {
-        width: 100%;
-        max-width: 400px;
-        border-radius: 20px;
-        box-shadow: var(--shadow);
-    }
-
-    .floating-elements {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-    }
-
-    .floating-element {
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        background: rgba(212, 175, 55, 0.3);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        color: var(--secondary);
-        animation: floatElement 6s infinite ease-in-out;
-        border: 2px solid var(--secondary);
-    }
-
-    .floating-element.element-1 {
-        top: 10%;
-        left: 10%;
-        animation-delay: 0s;
-    }
-
-    .floating-element.element-2 {
-        top: 60%;
-        right: 10%;
-        animation-delay: 2s;
-    }
-
-    .floating-element.element-3 {
-        bottom: 20%;
-        left: 20%;
-        animation-delay: 4s;
-    }
-
-    @keyframes floatElement {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-20px) rotate(180deg); }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-        .hamburger {
-            display: block;
-        }
-
-        .nav-menu {
-            position: fixed;
-            top: 80px;
-            left: -100%;
-            width: 100%;
-            background: var(--primary);
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 0;
-            transition: var(--transition);
-        }
-
-        .nav-menu.active {
-            left: 0;
-        }
-
-        .hero-content {
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            text-align: center;
-        }
-
-        .hero-text h1 {
-            font-size: 2.8rem;
-        }
-
-        .hero-text p {
-            font-size: 1.1rem;
-        }
-
-        .hero-buttons {
-            justify-content: center;
-        }
-
-        .btn {
-            width: 100%;
-            max-width: 300px;
-        }
-
-        .hero-image-content {
-            padding: 2rem;
-        }
-
-        .hero-image img {
-            max-width: 300px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .hero-text h1 {
-            font-size: 2.2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-        }
-
-        .logo img {
-            height: 35px;
-        }
-
-        .hero {
-            margin-top: 70px;
-        }
-    }
-
-    /* Special animation for mobile touch devices */
-    @media (hover: none) and (pointer: coarse) {
-        .nav-menu a:hover {
-            background: transparent;
-        }
-
-        .btn:hover {
-            transform: none;
-        }
-
-        .btn:active {
-            transform: scale(0.98);
-        }
-    }
-  </style>
+    <link rel="icon" href="/images/favicon.png" type="image/png">
 </head>
 <body>
     <!-- Header -->
@@ -374,182 +27,113 @@ header.hide {
             </div>
             <ul class="nav-menu">
                 <li><a href="./">Home</a></li>
-                <li><a href="about/">About</a></li>
-                <li><a href="services/">Services</a></li>
-                <li><a href="blog/">Blog</a></li>
-                <li><a href="book-online/">Book Online</a></li>
-                <li><a href="contact-us/">Contact</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/blog/" class="active">Blog</a></li>
+                <li><a href="/book-online/">Book Online</a></li>
+                <li><a href="/contact-us/">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
-                <h1>Your Trusted Loans Consultancy Partner</h1>
-                <p>We help you navigate the complex world of loans with expert advice and personalized solutions for your financial needs.</p>
-                <div class="hero-buttons">
-                    <a href="book-online/index.html" class="btn btn-primary">Get Started Today</a>
-                    <a href="services/index.html" class="btn btn-secondary">Our Services</a>
-                </div>
-            </div>
-            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                <div class="hero-image-content">
-                    <div class="floating-elements">
-                        <div class="floating-element element-1">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <div class="floating-element element-2">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="floating-element element-3">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Financial Consultation">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="blog-hero">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Our Services</h2>
-                <p>Comprehensive loan solutions tailored to your needs</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Mortgage Loans</h3>
-                    <p>Expert guidance for home buying with competitive mortgage rates and personalized solutions.</p>
-                    <a href="services/index.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Business Loans</h3>
-                    <p>Funding solutions to start, grow, or expand your business with favorable terms.</p>
-                    <a href="services/index.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <h3>Personal Loans</h3>
-                    <p>Flexible personal loan options for your individual needs and financial goals.</p>
-                    <a href="services/index.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Mulachap Ventures Blog</h1>
+                <p>Expert insights on loans, financing, and financial growth strategies</p>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-us">
+    <!-- Coming Soon Section -->
+    <section class="coming-soon">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Why Choose Mulachap</h2>
-                <p>Experience the difference of working with true financial experts</p>
-            </div>
-            <div class="features">
-                <div class="feature" data-aos="fade-right" data-aos-delay="100">
-                    <div class="feature-content">
-                        <h3><i class="fas fa-users"></i> Expert Team</h3>
-                        <p>Our consultants have over 50 years of combined experience in the financial industry.</p>
+            <div class="construction-container" data-aos="zoom-in">
+                <div class="construction-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h2>Our Blog Is Coming Soon!</h2>
+                <p>We're working hard to bring you valuable content about loans, financing options, and financial advice. Our team is crafting insightful articles to help you make informed financial decisions.</p>
+                
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                
+                <div class="countdown">
+                    <div class="countdown-item" data-aos="fade-up" data-aos-delay="100">
+                        <span class="countdown-number" id="days">30</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item" data-aos="fade-up" data-aos-delay="200">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item" data-aos="fade-up" data-aos-delay="300">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item" data-aos="fade-up" data-aos-delay="400">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
                     </div>
                 </div>
-                <div class="feature" data-aos="fade-left" data-aos-delay="200">
-                    <div class="feature-content">
-                        <h3><i class="fas fa-hand-holding-usd"></i> Best Rates</h3>
-                        <p>We have partnerships with leading lenders to get you the most competitive rates.</p>
-                    </div>
-                </div>
-                <div class="feature" data-aos="fade-right" data-aos-delay="300">
-                    <div class="feature-content">
-                        <h3><i class="fas fa-shield-alt"></i> Secure & Confidential</h3>
-                        <p>Your financial information is protected with bank-level security measures.</p>
-                    </div>
-                </div>
-                <div class="feature" data-aos="fade-left" data-aos-delay="400">
-                    <div class="feature-content">
-                        <h3><i class="fas fa-check-circle"></i> High Success Rate</h3>
-                        <p>98% of our clients secure the funding they need through our services.</p>
-                    </div>
-                </div>
+                
+                <a href="/" class="cta-button">Return to Homepage</a>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
+    <!-- Blog Preview Section -->
+    <section class="blog-preview">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Client Testimonials</h2>
-                <p>What our clients say about us</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>What to Expect</h2>
+                <p>Here's a preview of the valuable content we're preparing for you</p>
             </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card" data-aos="flip-left" data-aos-delay="100">
-                    <div class="testimonial-text">
-                        <p>"Mulachap helped me secure a mortgage when other consultants said it wasn't possible. Their expertise made all the difference in buying my dream home."</p>
+            
+            <div class="blog-grid">
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="John Smith">
-                        </div>
-                        <div class="author-info">
-                            <h4>John Smith</h4>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                    <div class="card-content">
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <h3>Understanding Asset Financing</h3>
+                        <p>Learn how asset financing can help grow your business without straining your cash flow.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                            <span><i class="far fa-calendar"></i> Coming Soon</span>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card" data-aos="flip-left" data-aos-delay="200">
-                    <div class="testimonial-text">
-                        <p>"The business loan process was seamless with Mulachap. They found me the perfect financing solution that allowed me to expand my operations."</p>
+                
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <i class="fas fa-car"></i>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Johnson">
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                    <div class="card-content">
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <h3>Logbook Loans Explained</h3>
+                        <p>Everything you need to know about using your vehicle as collateral for a loan.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                            <span><i class="far fa-calendar"></i> Coming Soon</span>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card" data-aos="flip-left" data-aos-delay="300">
-                    <div class="testimonial-text">
-                        <p>"I was struggling with debt consolidation, but Mulachap's consultants created a personalized plan that saved me thousands in interest payments."</p>
+                
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image">
+                        <i class="fas fa-file-invoice-dollar"></i>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael Chen">
-                        </div>
-                        <div class="author-info">
-                            <h4>Michael Chen</h4>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
+                    <div class="card-content">
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <h3>LPO Financing Guide</h3>
+                        <p>How to secure financing using your Local Purchase Order to grow your business.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                            <span><i class="far fa-calendar"></i> Coming Soon</span>
                         </div>
                     </div>
                 </div>
@@ -557,59 +141,21 @@ header.hide {
         </div>
     </section>
 
-    <section class="faq" id="faq">
-  <div class="container">
-    <div class="section-title" data-aos="fade-up">
-      <h2>Loan Consultancy FAQs</h2>
-      <p>Find quick answers to common loan and financing questions.</p>
-    </div>
-
-    <div class="faq-accordion" data-aos="fade-up">
-      <div class="faq-item">
-        <button class="faq-question">
-          What types of loans does Mulachap specialize in?
-          <span class="faq-icon"><i class="fas fa-plus"></i></span>
-        </button>
-        <div class="faq-answer">
-          <p>We provide mortgage loans, business loans, personal loans, refinancing, and debt consolidation solutions tailored to your financial goals.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          How do I know which loan is right for me?
-          <span class="faq-icon"><i class="fas fa-plus"></i></span>
-        </button>
-        <div class="faq-answer">
-          <p>Our loan consultants analyze your financial situation and recommend the best financing solution with competitive rates and flexible terms.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Is my financial information secure with Mulachap?
-          <span class="faq-icon"><i class="fas fa-plus"></i></span>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. We use bank-level encryption and confidentiality measures to ensure your information remains private and secure.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- Newsletter Section -->
+    <section class="newsletter">
         <div class="container">
-            <div class="cta-content" data-aos="zoom-in">
-                <h2>Ready to Find Your Perfect Loan Solution?</h2>
-                <p>Schedule a free consultation with one of our experts today and take the first step toward achieving your financial goals.</p>
-                <a href="book-online/index.html" class="btn btn-primary">Book Your Consultation</a>
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Stay Updated</h2>
+                <p>Be the first to know when our blog launches and get exclusive financial tips delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-button">Subscribe</button>
+                </form>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -632,6 +178,8 @@ header.hide {
             <li><a href="/services/">Services</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/contact-us/">Contact</a></li>
+            <li><a href="/privacy-policy/">Privacy</a></li>
+            <li><a href="/terms-of-service/">Terms of use</a></li>
           </ul>
         </div>
         <div class="footer-column">
@@ -648,16 +196,16 @@ header.hide {
         <div class="footer-column">
           <h3>Contact Us</h3>
           <ul>
-            <li><i class="fas fa-map-marker-alt"></i> 123 Financial Street, Nairobi, Kenya</li>
+            <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
             <li><i class="fas fa-phone"></i> +254 712 345 678</li>
-            <li><i class="fas fa-envelope"></i> info@mulachap.com</li>
+            <li><i class="fas fa-envelope"></i> mulachapventures@gmail.com</li>
             <li><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm, Sat: 9am-1pm</li>
           </ul>
         </div>
       </div>
       <div class="copyright">
         <p>&copy; 2025 Mulachap Ventures. All rights reserved. <br>
-        Powered by <a href="https://www.ephraimworks.online/" target="_blank" style="font-size: 20px; color:chocolate; text-decoration: none;">Ephraim</a></p>
+        Powered by <a href="https://www.ephraimworks.online/" target="_blank" style="font-size: 20px; color: #00eeff; text-decoration: none;">Ephraim</a></p>
       </div>
     </div>
   </footer>
@@ -672,7 +220,7 @@ header.hide {
 <div class="whatsapp-widget" id="whatsapp-widget">
   <div class="widget-header">
     <div class="profile-info">
-      <img src="images/favicon.png" alt="Mulachap Ventures" class="profile-img">
+      <img src="/images/favicon.png" alt="Mulachap Ventures" class="profile-img">
       <div>
         <div class="profile-name">Mulachap Ventures</div>
         <div class="profile-status">Loan Consultant • Available</div>
@@ -709,26 +257,81 @@ header.hide {
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/js/whatsapp-widget.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="/js/index.js"></script>
+   <script src="/js/whatsapp-widget.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init();
 
-        // Mobile menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
+            // Countdown timer - Fixed with future date
+            function updateCountdown() {
+                // Set target date to 30 days from now
+                const targetDate = new Date();
+                targetDate.setDate(targetDate.getDate() + 30);
+                targetDate.setHours(0, 0, 0, 0);
+                
+                const now = new Date().getTime();
+                const timeLeft = targetDate - now;
 
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+                if (timeLeft < 0) {
+                    // If time is up, show zeros and update message
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    
+                    // Update the construction message
+                    const constructionText = document.querySelector('.construction-container h2');
+                    if (constructionText) {
+                        constructionText.textContent = "Our Blog Is Live!";
+                    }
+                    
+                    const progressBar = document.querySelector('.progress-bar');
+                    if (progressBar) {
+                        progressBar.style.width = '100%';
+                        progressBar.style.animation = 'none';
+                    }
+                    return;
+                }
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                
+                // Update progress bar based on time elapsed
+                const totalTime = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+                const elapsedTime = totalTime - timeLeft;
+                const progressPercentage = Math.min((elapsedTime / totalTime) * 100, 100);
+                
+                const progressBar = document.querySelector('.progress-bar');
+                if (progressBar) {
+                    progressBar.style.width = progressPercentage + '%';
+                }
+            }
+
+            // Update countdown every second
+            setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call
+
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('.newsletter-input').value;
+                    if (email) {
+                        alert(`Thank you for subscribing with ${email}! We'll notify you when our blog launches.`);
+                        this.reset();
+                    } else {
+                        alert('Please enter a valid email address.');
+                    }
+                });
+            }
+
     </script>
 </body>
 </html>

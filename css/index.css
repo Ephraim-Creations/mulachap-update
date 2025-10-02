@@ -85,7 +85,7 @@ header {
 
 .nav-menu a:hover {
     background: rgba(212, 175, 55, 0.2);
-    color: var(--secondary);
+    color: white;
 }
 
 .hamburger {

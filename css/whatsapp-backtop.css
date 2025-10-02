@@ -140,7 +140,7 @@
     height: 50px;
     font-size: 1.5rem;
     background-color: var(--secondary);
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 50%;
     box-shadow: var(--shadow);
@@ -160,7 +160,9 @@
 }
 
 #backToTop:hover {
-    background-color: var(--secondary);
+    background-color: #01301a;
+    color: white;
+
 }
 
 /* Responsive adjustments for buttons */

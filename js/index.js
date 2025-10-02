@@ -82,6 +82,37 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Create money bills background
+function createMoneyBills() {
+    const moneyBillsBg = document.querySelector('.money-bills-bg');
+    if (!moneyBillsBg) return;
+    
+    const moneySymbols = ['💵', '🪙'/*, '💵', '🪙', '💵', '🪙'*/];
+    
+    for (let i = 0; i < 15; i++) {
+        const moneyBill = document.createElement('div');
+        moneyBill.className = 'money-bill';
+        moneyBill.textContent = moneySymbols[Math.floor(Math.random() * moneySymbols.length)];
+        moneyBill.style.left = `${Math.random() * 100}%`;
+        moneyBill.style.animationDelay = `${Math.random() * 20}s`;
+        moneyBill.style.fontSize = `${Math.random() * 2 + 2}rem`;
+        moneyBillsBg.appendChild(moneyBill);
+    }
+}
+
+// Initialize money bills when page loads
+document.addEventListener('DOMContentLoaded', createMoneyBills);
+
+// Add shadow to header when scrolled
+function updateHeaderShadow() {
+    if (window.scrollY > 10) {
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+    } else {
+        header.style.boxShadow = 'none';
+    }
+}
+
+window.addEventListener('scroll', updateHeaderShadow);
 //header scroll effect
 let lastScrollY = window.scrollY;
 const header = document.querySelector("header");
