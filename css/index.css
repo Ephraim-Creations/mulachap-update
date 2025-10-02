@@ -19,6 +19,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
     color: var(--text);
     background: white;
 }
