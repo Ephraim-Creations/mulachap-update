@@ -19,28 +19,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Change background every 5 seconds
     setInterval(changeBackground, 5000);
     
-    // Mobile menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+// Mobile menu toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const header = document.querySelector('header');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
     });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-            navMenu.classList.remove('active');
-        }
-    });
-    
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-    });
+});
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -82,37 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Create money bills background
-function createMoneyBills() {
-    const moneyBillsBg = document.querySelector('.money-bills-bg');
-    if (!moneyBillsBg) return;
-    
-    const moneySymbols = ['💵', '🪙'/*, '💵', '🪙', '💵', '🪙'*/];
-    
-    for (let i = 0; i < 15; i++) {
-        const moneyBill = document.createElement('div');
-        moneyBill.className = 'money-bill';
-        moneyBill.textContent = moneySymbols[Math.floor(Math.random() * moneySymbols.length)];
-        moneyBill.style.left = `${Math.random() * 100}%`;
-        moneyBill.style.animationDelay = `${Math.random() * 20}s`;
-        moneyBill.style.fontSize = `${Math.random() * 2 + 2}rem`;
-        moneyBillsBg.appendChild(moneyBill);
-    }
-}
-
-// Initialize money bills when page loads
-document.addEventListener('DOMContentLoaded', createMoneyBills);
-
-// Add shadow to header when scrolled
-function updateHeaderShadow() {
-    if (window.scrollY > 10) {
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = 'none';
-    }
-}
-
-window.addEventListener('scroll', updateHeaderShadow);
 //header scroll effect
 let lastScrollY = window.scrollY;
 const header = document.querySelector("header");
