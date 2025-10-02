@@ -617,6 +617,20 @@ footer {
     margin-bottom: 40px;
 }
 
+ .footer-logo{
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+ }
+ .footer-logo img{
+        height: 50px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 8px;
+ }
 .footer-column h3 {
     font-size: 1.3rem;
     font-weight: 600;
@@ -791,6 +805,13 @@ footer {
     }
 
     .logo img {
+        height: 35px;
+    }
+        .footer-logo {
+        font-size: 1.2rem;
+    }
+
+    .footer-logo img {
         height: 35px;
     }
 

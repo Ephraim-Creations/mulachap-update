@@ -1,60 +1,60 @@
-            // Smooth scrolling for sidebar navigation
-            const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
-            
-            sidebarLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        // Update active class
-                        sidebarLinks.forEach(l => l.classList.remove('active'));
-                        this.classList.add('active');
-                        
-                        // Scroll to section
-                        window.scrollTo({
-                            top: targetSection.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (navMenu.classList.contains('active')) {
-                            navMenu.classList.remove('active');
-                        }
-                    }
-                });
-            });
 
-            // Update active sidebar link on scroll
-            window.addEventListener('scroll', function() {
-                const sections = document.querySelectorAll('.content-section');
-                const scrollPos = window.scrollY + 150;
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    const sectionId = section.getAttribute('id');
-                    
-                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                        sidebarLinks.forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === `#${sectionId}`) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                });
-            });
 
-            // Scroll indicator click
-            const scrollIndicator = document.querySelector('.scroll-indicator');
-            if (scrollIndicator) {
-                scrollIndicator.addEventListener('click', function() {
-                    window.scrollTo({
-                        top: document.querySelector('.terms-main').offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                });
-            }
+// Auto-hide header on scroll
+let lastScrollY = window.scrollY;
+let ticking = false;
+
+function updateHeader() {
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down & past 100px - hide header
+        header.classList.add('hide');
+    } else {
+        // Scrolling up - show header
+        header.classList.remove('hide');
+    }
+    
+    lastScrollY = currentScrollY;
+    ticking = false;
+}
+
+function onScroll() {
+    if (!ticking) {
+        requestAnimationFrame(updateHeader);
+        ticking = true;
+    }
+}
+
+window.addEventListener('scroll', onScroll);
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+            faqItem.classList.add('active');
+        }
+    });
+});
+
+
+
+// Add shadow to header when scrolled
+function updateHeaderShadow() {
+    if (window.scrollY > 10) {
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+    } else {
+        header.style.boxShadow = 'none';
+    }
+}
+
+window.addEventListener('scroll', updateHeaderShadow);
