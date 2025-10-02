@@ -83,3 +83,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// Simple restart version (no reset to zero)
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-numbers');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-count'));
+        const duration = 2000;
+        
+        const animateCounter = () => {
+            let current = 0;
+            const step = target / (duration / 16);
+            
+            const updateCounter = () => {
+                current += step;
+                if (current < target) {
+                    counter.textContent = Math.floor(current).toLocaleString();
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target.toLocaleString();
+                    // Restart after 5 seconds
+                    setTimeout(animateCounter, 5000);
+                }
+            };
+            
+            updateCounter();
+        };
+        
+        // Start when in viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        
+        observer.observe(counter);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', animateCounters);

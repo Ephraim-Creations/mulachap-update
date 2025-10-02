@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mulachap Ventures - Loan Consultancy Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/whatsapp-backtop.css">
+  <style>
+    :root {
+        --primary: #006D5B;
+        --secondary: #D4AF37;
+        --neutral-light: #F7F7F5;
+        --neutral-mid: lab(52.84% -2.14 -10.58);
+        --neutral-dark: #000000ec;
+        --text: #333333;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.548);
+        --transition: all 0.3s ease;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: white;
+    }
+
+    .container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Header Styles */
+
+
+header.hide {
+  transform: translateY(-100%);
+}
+    header {
+        background: rgba(0, 109, 91, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition);
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+    }
+
+    .logo img {
+        height: 50px;
+        width: auto;
+        margin-right: 10px;
+        border-radius: 8px;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 0rem;
+    }
+
+    .nav-menu a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: var(--transition);
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+    }
+
+    .nav-menu a:hover {
+        background: rgba(212, 175, 55, 0.2);
+        color: var(--secondary);
+    }
+
+    .hamburger {
+        display: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+        background: linear-gradient(135deg, var(--primary) 0%, #004d3d 100%);
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.1"><polygon points="100,100 200,50 300,100 400,50 500,100 600,50 700,100 800,50 900,100 1000,50 1000,150 900,200 800,150 700,200 600,150 500,200 400,150 300,200 200,150 100,200 0,150 0,50" fill="white"/></svg>');
+        animation: float 20s infinite linear;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px) translateX(0px); }
+        100% { transform: translateY(-100px) translateX(-100px); }
+    }
+
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(45deg, #fff, var(--neutral-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .btn-primary {
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        color: white;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 109, 91, 0.4);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: var(--secondary);
+    }
+
+    .hero-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-image-content {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        padding: 3rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+    }
+
+    .floating-elements {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .floating-element {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: rgba(212, 175, 55, 0.3);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: var(--secondary);
+        animation: floatElement 6s infinite ease-in-out;
+        border: 2px solid var(--secondary);
+    }
+
+    .floating-element.element-1 {
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+
+    .floating-element.element-2 {
+        top: 60%;
+        right: 10%;
+        animation-delay: 2s;
+    }
+
+    .floating-element.element-3 {
+        bottom: 20%;
+        left: 20%;
+        animation-delay: 4s;
+    }
+
+    @keyframes floatElement {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .hamburger {
+            display: block;
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            width: 100%;
+            background: var(--primary);
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+            transition: var(--transition);
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .hero-content {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .hero-image-content {
+            padding: 2rem;
+        }
+
+        .hero-image img {
+            max-width: 300px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-text h1 {
+            font-size: 2.2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        .logo img {
+            height: 35px;
+        }
+
+        .hero {
+            margin-top: 70px;
+        }
+    }
+
+    /* Special animation for mobile touch devices */
+    @media (hover: none) and (pointer: coarse) {
+        .nav-menu a:hover {
+            background: transparent;
+        }
+
+        .btn:hover {
+            transform: none;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+    }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container container">
+           <a href="/" style="text-decoration: none;"> 
+               <div class="logo"> 
+                   <img src="/images/favicon.png" alt="Mulachap Ventures">Mulachap<span style="color:var(--secondary)"> Ventures</span>
+               </div>
+           </a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="./">Home</a></li>
+                <li><a href="about/">About</a></li>
+                <li><a href="services/">Services</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="book-online/">Book Online</a></li>
+                <li><a href="contact-us/">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                <h1>Your Trusted Loans Consultancy Partner</h1>
+                <p>We help you navigate the complex world of loans with expert advice and personalized solutions for your financial needs.</p>
+                <div class="hero-buttons">
+                    <a href="book-online/index.html" class="btn btn-primary">Get Started Today</a>
+                    <a href="services/index.html" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                <div class="hero-image-content">
+                    <div class="floating-elements">
+                        <div class="floating-element element-1">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="floating-element element-2">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="floating-element element-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Financial Consultation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Services</h2>
+                <p>Comprehensive loan solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Mortgage Loans</h3>
+                    <p>Expert guidance for home buying with competitive mortgage rates and personalized solutions.</p>
+                    <a href="services/index.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Business Loans</h3>
+                    <p>Funding solutions to start, grow, or expand your business with favorable terms.</p>
+                    <a href="services/index.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Personal Loans</h3>
+                    <p>Flexible personal loan options for your individual needs and financial goals.</p>
+                    <a href="services/index.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Why Choose Mulachap</h2>
+                <p>Experience the difference of working with true financial experts</p>
+            </div>
+            <div class="features">
+                <div class="feature" data-aos="fade-right" data-aos-delay="100">
+                    <div class="feature-content">
+                        <h3><i class="fas fa-users"></i> Expert Team</h3>
+                        <p>Our consultants have over 50 years of combined experience in the financial industry.</p>
+                    </div>
+                </div>
+                <div class="feature" data-aos="fade-left" data-aos-delay="200">
+                    <div class="feature-content">
+                        <h3><i class="fas fa-hand-holding-usd"></i> Best Rates</h3>
+                        <p>We have partnerships with leading lenders to get you the most competitive rates.</p>
+                    </div>
+                </div>
+                <div class="feature" data-aos="fade-right" data-aos-delay="300">
+                    <div class="feature-content">
+                        <h3><i class="fas fa-shield-alt"></i> Secure & Confidential</h3>
+                        <p>Your financial information is protected with bank-level security measures.</p>
+                    </div>
+                </div>
+                <div class="feature" data-aos="fade-left" data-aos-delay="400">
+                    <div class="feature-content">
+                        <h3><i class="fas fa-check-circle"></i> High Success Rate</h3>
+                        <p>98% of our clients secure the funding they need through our services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Client Testimonials</h2>
+                <p>What our clients say about us</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="testimonial-text">
+                        <p>"Mulachap helped me secure a mortgage when other consultants said it wasn't possible. Their expertise made all the difference in buying my dream home."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="John Smith">
+                        </div>
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="testimonial-text">
+                        <p>"The business loan process was seamless with Mulachap. They found me the perfect financing solution that allowed me to expand my operations."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Johnson">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="testimonial-text">
+                        <p>"I was struggling with debt consolidation, but Mulachap's consultants created a personalized plan that saved me thousands in interest payments."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Loan Consultancy FAQs</h2>
+      <p>Find quick answers to common loan and financing questions.</p>
+    </div>
+
+    <div class="faq-accordion" data-aos="fade-up">
+      <div class="faq-item">
+        <button class="faq-question">
+          What types of loans does Mulachap specialize in?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>We provide mortgage loans, business loans, personal loans, refinancing, and debt consolidation solutions tailored to your financial goals.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How do I know which loan is right for me?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Our loan consultants analyze your financial situation and recommend the best financing solution with competitive rates and flexible terms.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Is my financial information secure with Mulachap?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. We use bank-level encryption and confidentiality measures to ensure your information remains private and secure.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Ready to Find Your Perfect Loan Solution?</h2>
+                <p>Schedule a free consultation with one of our experts today and take the first step toward achieving your financial goals.</p>
+                <a href="book-online/index.html" class="btn btn-primary">Book Your Consultation</a>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Mulachap</h3>
+          <p>Your trusted partner for all loan consultancy needs. We provide expert advice and personalized solutions.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact-us/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="/services/#asset-financing">Asset Financing Advisory</a></li>
+            <li><a href="/services/#logbook-loans">Logbook Loans Guidance</a></li>
+            <li><a href="/services/#loan-restructuring">Loan Restructuring</a></li>
+            <li><a href="/services/#import-financing">Import Financing Consultation</a></li>
+            <li><a href="/services/#payslip-loans">Payslip Loans Advisory</a></li>
+            <li><a href="/services/#lpo-financing">LPO Financing Guidance</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Financial Street, Nairobi, Kenya</li>
+            <li><i class="fas fa-phone"></i> +254 712 345 678</li>
+            <li><i class="fas fa-envelope"></i> info@mulachap.com</li>
+            <li><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm, Sat: 9am-1pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Mulachap Ventures. All rights reserved. <br>
+        Powered by <a href="https://www.ephraimworks.online/" target="_blank" style="font-size: 20px; color:chocolate; text-decoration: none;">Ephraim</a></p>
+      </div>
+    </div>
+  </footer>
+    
+<!-- WhatsApp Widget -->
+<!-- Floating WhatsApp Icon -->
+<div id="whatsapp-float" data-aos="pulse" data-aos-duration="1200" data-aos-delay="200" data-aos-easing="ease-in-out">
+  <i class="fab fa-whatsapp"></i>
+</div>
+
+<!-- WhatsApp Widget -->
+<div class="whatsapp-widget" id="whatsapp-widget">
+  <div class="widget-header">
+    <div class="profile-info">
+      <img src="images/favicon.png" alt="Mulachap Ventures" class="profile-img">
+      <div>
+        <div class="profile-name">Mulachap Ventures</div>
+        <div class="profile-status">Loan Consultant • Available</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span class="time" id="live-time">--:-- EAT</span>
+      <button class="close-btn" id="close-widget">×</button>
+    </div>
+  </div>
+
+  <!-- Message bubble styled as sent message -->
+  <div class="message-bubble yours">
+    <p>Need a loan consultation?</p>
+    <p>We help you access the best financing options.</p>
+    <br>
+    <p>Let’s discuss your needs...</p>
+    <div class="message-meta">
+      <span class="message-time">--:--</span>
+      <i class="fas fa-check-double"></i>
+    </div>
+  </div>
+
+  <a href="https://wa.me/254741699953?text=Hi%20Mulachap%20Ventures%2C%20I%20need%20a%20loan%20consultation.%20Could%20you%20help%20me%20with..."
+     target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i> Start Chat
+  </a>
+</div>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/whatsapp-widget.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

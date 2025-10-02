@@ -2,70 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-  <!-- SEO Title -->
-  <title>Mulachap Loan Consultancy | Mortgage, Business & Personal Loan Experts</title>
-
-  <!-- Meta Description -->
-  <meta name="description" content="Mulachap Loan Consultancy helps individuals and businesses secure mortgage loans, business loans, personal loans, and refinancing with expert guidance and competitive rates." />
-
-  <!-- Keywords -->
-  <meta name="keywords" content="loan consultancy, mortgage loans, business loans, personal loans, loan refinancing, debt consolidation, financial consulting" />
-
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="Mulachap Loan Consultancy | Trusted Loan Experts" />
-  <meta property="og:description" content="Get expert advice on mortgages, personal loans, and business financing with Mulachap – your trusted loan consultancy partner." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e" />
-  <meta property="og:url" content="https://www.mulachap.com" />
-  <meta property="og:type" content="website" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-
-  <!-- Fonts & Icons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mulachap Ventures - Loan Consultancy Services</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
-
-  <!-- Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/whatsapp-backtop.css">
-  
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/whatsapp-backtop.css">
 </head>
-
 <body>
     <!-- Header -->
     <header>
         <div class="header-container container">
-           <a href="/" style="text-decoration: none;"> <div class="logo"> <img src="images/favicon.png" alt="">Mulachap<span style="color:var(--secondary)"> Ventures</span></div></a>
+           <a href="/" style="text-decoration: none;"> 
+               <div class="logo"> 
+                   <img src="/images/favicon.png" alt="Mulachap Ventures">Mulachap<span style="color:var(--secondary)"> Ventures</span>
+               </div>
+           </a>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-menu">
                 <li><a href="./">Home</a></li>
-                <li><a href="about/">About</a></li>
-                <li><a href="services/">Services</a></li>
-                <li><a href="blog/">Blog</a></li>
-                <li><a href="book-online/">Book Online</a></li>
-                <li><a href="contact-us/">Contact</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/book-online/">Book Online</a></li>
+                <li><a href="/contact-us/">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
-            <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1582515074017-2cac34d0ac7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
-            <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
-            <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
-        </div>
-        <div class="hero-overlay"></div>
+        <div class="money-bills-bg"></div>
         <div class="container hero-content">
             <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
                 <h1>Your Trusted Loans Consultancy Partner</h1>
@@ -76,11 +46,25 @@
                 </div>
             </div>
             <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Financial Consultation">
+                <div class="hero-image-content">
+                    <div class="floating-elements">
+                        <div class="floating-element element-1">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="floating-element element-2">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="floating-element element-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Financial Consultation">
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Rest of your sections remain the same -->
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
@@ -225,7 +209,8 @@
         </div>
     </section>
 
-    <section class="faq" id="faq">
+    <!-- FAQ -->
+<section class="faq" id="faq">
   <div class="container">
     <div class="section-title" data-aos="fade-up">
       <h2>Loan Consultancy FAQs</h2>
@@ -235,31 +220,61 @@
     <div class="faq-accordion" data-aos="fade-up">
       <div class="faq-item">
         <button class="faq-question">
-          What types of loans does Mulachap specialize in?
+          What's the interest rate?
           <span class="faq-icon"><i class="fas fa-plus"></i></span>
         </button>
         <div class="faq-answer">
-          <p>We provide mortgage loans, business loans, personal loans, refinancing, and debt consolidation solutions tailored to your financial goals.</p>
+          <p>Our interest rates vary depending on the loan type and your profile. We ensure rates are competitive and clearly disclosed before approval.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question">
-          How do I know which loan is right for me?
+          How long does your process take?
           <span class="faq-icon"><i class="fas fa-plus"></i></span>
         </button>
         <div class="faq-answer">
-          <p>Our loan consultants analyze your financial situation and recommend the best financing solution with competitive rates and flexible terms.</p>
+          <p>The process typically takes 24 to 72 hours once all documents are provided. We work to ensure fast and efficient approvals.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question">
-          Is my financial information secure with Mulachap?
+          What's the maximum repayment period?
           <span class="faq-icon"><i class="fas fa-plus"></i></span>
         </button>
         <div class="faq-answer">
-          <p>Yes. We use bank-level encryption and confidentiality measures to ensure your information remains private and secure.</p>
+          <p>Repayment periods range up to 60 months depending on the loan product. Flexible terms are available to fit your repayment capacity.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What are the loan requirements?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>You need a valid ID, proof of income, and supporting documents like payslips or bank statements. Additional requirements may apply for larger loans.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What's the maximum amount you give?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>The maximum loan amount depends on your creditworthiness and repayment ability. We assess your profile to determine the eligible limit.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you check CRB?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, we review CRB status as part of the credit assessment process. However, we also consider other factors when making loan decisions.</p>
         </div>
       </div>
     </div>
@@ -267,67 +282,70 @@
 </section>
 
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content" data-aos="zoom-in">
-                <h2>Ready to Find Your Perfect Loan Solution?</h2>
-                <p>Schedule a free consultation with one of our experts today and take the first step toward achieving your financial goals.</p>
-                <a href="book-online/index.html" class="btn btn-primary">Book Your Consultation</a>
-            </div>
-        </div>
-    </section>
+<!-- CTA Section -->
+<section id="about-cta">
+  <div class="container">
+    <div class="cta-section" data-aos="zoom-in" data-aos-duration="800">
+      <h2>Ready to Secure Your Loan?</h2>
+      <p>Get expert guidance, fast approvals, and flexible repayment options tailored to your needs. Let’s help you access the financing you deserve.</p>
+      <a href="/contact-us/" class="cta-button-light">Apply for a Loan Consultation</a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Mulachap</h3>
-                    <p>Your trusted partner for all loan consultancy needs. We provide expert advice and personalized solutions.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="./">Home</a></li>
-                        <li><a href="about/">About Us</a></li>
-                        <li><a href="services/">Services</a></li>
-                        <li><a href="blog/">Blog</a></li>
-                        <li><a href="contact-us/">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="services/">Mortgage Loans</a></li>
-                        <li><a href="services/">Business Loans</a></li>
-                        <li><a href="services/">Personal Loans</a></li>
-                        <li><a href="services/">Debt Consolidation</a></li>
-                        <li><a href="services/">Loan Refinancing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Mulachap</h3>
+          <p>Your trusted partner for all loan consultancy needs. We provide expert advice and personalized solutions.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
           <ul>
-            <li><i class="fas fa-map-marker-alt"></i> 123 Financial Street, Nairobi, Kenya</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact-us/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="/services/#asset-financing">Asset Financing Advisory</a></li>
+            <li><a href="/services/#logbook-loans">Logbook Loans Guidance</a></li>
+            <li><a href="/services/#loan-restructuring">Loan Restructuring</a></li>
+            <li><a href="/services/#import-financing">Import Financing Consultation</a></li>
+            <li><a href="/services/#payslip-loans">Payslip Loans Advisory</a></li>
+            <li><a href="/services/#lpo-financing">LPO Financing Guidance</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
             <li><i class="fas fa-phone"></i> +254 712 345 678</li>
-            <li><i class="fas fa-envelope"></i> info@mulachap.com</li>
+            <li><i class="fas fa-envelope"></i> mulachapventures@gmail.com</li>
             <li><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm, Sat: 9am-1pm</li>
           </ul>
-                </div>
-            </div>
+        </div>
+      </div>
       <div class="copyright">
-        <p>&copy; 2025 Mulachap Loan Consultancy. All rights reserved. <br>
-        Powered by <a href="https://www.ephraimworks.online/" target="_blank" style="font-size: 20px; color:chocolate; text-decoration: none;">Ephraim</a></p>
+        <p>&copy; 2025 Mulachap Ventures. All rights reserved. <br>
+        Powered by <a href="https://www.ephraimworks.online/" target="_blank" style="font-size: 20px; color: #00eeff; text-decoration: none;">Ephraim</a></p>
       </div>
     </div>
-    </footer>
+  </footer>
     
 <!-- WhatsApp Widget -->
 <!-- Floating WhatsApp Icon -->
@@ -376,8 +394,9 @@
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/whatsapp-widget.js"></script>
-    
+    <script src="/js/whatsapp-widget.js"></script>
+    <script src="/js/terms.js"></script>
+
+
 </body>
 </html>
