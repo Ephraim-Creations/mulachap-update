@@ -96,6 +96,17 @@ header {
     cursor: pointer;
 }
 
+/* Unique style for the Join button */
+.join-btn {
+    background-color: #a37d00;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 238, 255, 0.5);
+}
+
+
 /* Hero Section with Money Bills Background */
 .hero {
     background: linear-gradient(135deg, var(--primary) 0%, #004d3d 100%);
