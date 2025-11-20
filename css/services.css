@@ -24,7 +24,7 @@
 /* Services Hero Section */
 .services-hero {
     padding: 150px 0 80px;
-    background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.826), rgba(1, 46, 6, 0.744)), url('/images/hero-banner.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     min-height: 40vh;
