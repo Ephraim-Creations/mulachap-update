@@ -143,9 +143,10 @@
     display: flex;
     align-items: center;
     gap: 50px;
+    justify-content: space-evenly;
 }
 
-.detail-content.reverse {
+.detail-content .reverse {
     flex-direction: row-reverse;
 }
 
@@ -167,12 +168,14 @@
 
 .detail-image {
     flex: 1;
-}
 
+}
 .detail-image img {
-    width: 100%;
+    width: 80%;
     border-radius: 8px;
     box-shadow: var(--shadow);
+    float: right;
+
 }
 
 .feature-list {

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 | Page Not Found | Mulachap Ventures</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" href="/images/favicon.png" type="image/png" />
+
+  <style>
+    :root {
+      --primary: #006D5B;
+      --secondary: #D4AF37;
+      --neutral-light: #F7F7F5;
+      --neutral-mid: lab(52.84% -2.14 -10.58);
+      --neutral-dark: #000000ec;
+      --text: #333333;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.548);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(212, 175, 55, 0.15), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(0, 109, 91, 0.18), transparent 35%),
+        var(--neutral-light);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(0, 109, 91, 0.08);
+      color: var(--primary);
+      border: 1px solid rgba(0, 109, 91, 0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .code {
+      font-size: clamp(80px, 14vw, 170px);
+      line-height: 0.9;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: -4px;
+      margin-bottom: 8px;
+      text-shadow: 4px 6px 0 rgba(212, 175, 55, 0.18);
+    }
+
+    h1 {
+      font-size: clamp(30px, 4.2vw, 58px);
+      line-height: 1.02;
+      color: var(--neutral-dark);
+      max-width: 700px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .accent {
+      color: var(--secondary);
+    }
+
+    .desc {
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 650px;
+      color: rgba(51, 51, 51, 0.85);
+      margin-bottom: 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: var(--transition);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #005549;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 1px solid rgba(0, 109, 91, 0.2);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      border-color: var(--secondary);
+      color: var(--neutral-dark);
+    }
+
+    .mini-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 15px;
+    }
+
+    .mini-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .mini-links a:hover {
+      color: var(--secondary);
+    }
+
+    .visual {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: white;
+      border-radius: 24px;
+      padding: 32px 26px;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.12);
+      position: relative;
+      transform: rotate(-3deg);
+      border: 1px solid rgba(0, 109, 91, 0.08);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      background: rgba(212, 175, 55, 0.12);
+      border-radius: 50%;
+      top: -30px;
+      right: -20px;
+      z-index: 0;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      background: rgba(0, 109, 91, 0.10);
+      border-radius: 50%;
+      bottom: -20px;
+      left: -15px;
+      z-index: 0;
+    }
+
+    .emoji {
+      font-size: 68px;
+      margin-bottom: 18px;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: var(--neutral-dark);
+      position: relative;
+      z-index: 1;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(51, 51, 51, 0.82);
+      position: relative;
+      z-index: 1;
+    }
+
+    .stamp {
+      margin-top: 22px;
+      display: inline-block;
+      padding: 10px 14px;
+      border: 2px dashed var(--secondary);
+      color: var(--primary);
+      border-radius: 12px;
+      font-weight: 800;
+      transform: rotate(4deg);
+      background: rgba(212, 175, 55, 0.08);
+      position: relative;
+      z-index: 1;
+    }
+
+    .floating {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.18;
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .f1 {
+      width: 80px;
+      height: 80px;
+      background: var(--secondary);
+      top: 30px;
+      left: 40px;
+    }
+
+    .f2 {
+      width: 58px;
+      height: 58px;
+      background: var(--primary);
+      bottom: 60px;
+      right: 20px;
+      animation-delay: 1s;
+    }
+
+    .f3 {
+      width: 28px;
+      height: 28px;
+      background: var(--secondary);
+      top: 120px;
+      right: 70px;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-14px);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .visual {
+        order: -1;
+        min-height: auto;
+      }
+
+      .card {
+        transform: rotate(0deg);
+      }
+
+      .content {
+        text-align: center;
+      }
+
+      .desc,
+      h1 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .actions,
+      .mini-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .desc {
+        font-size: 16px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <div class="tag">Oops. Wrong turn.</div>
+      <div class="code">404</div>
+      <h1>THIS PAGE TOOK A <span class="accent">LOAN</span> AND DISAPPEARED.</h1>
+      <p class="desc">
+        Looks like the page you wanted is not here right now. Maybe the link is broken, maybe the page moved,
+        maybe it vanished after approval. Either way, let’s get you back on track.
+      </p>
+
+      <div class="actions">
+        <a href="/" class="btn btn-primary">Go to Homepage</a>
+        <a href="/services/" class="btn btn-secondary">View Loan Services</a>
+        <a href="/blog/" class="btn btn-secondary">Read Blog</a>
+      </div>
+
+      <div class="mini-links">
+        <a href="/contact-us/">Contact Us</a>
+        <a href="/book-online/">Book Online</a>
+      </div>
+    </div>
+
+    <div class="visual">
+      <div class="floating f1"></div>
+      <div class="floating f2"></div>
+      <div class="floating f3"></div>
+
+      <div class="card">
+        <span class="emoji">🕵️</span>
+        <h2>Unseen page detected</h2>
+        <p>
+          We checked the records. This page is either missing, moved, or never existed in the first place.
+          Good news: the rest of the website is still very much alive.
+        </p>
+        <div class="stamp">NOT FOUND</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

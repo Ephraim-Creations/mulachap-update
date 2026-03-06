@@ -1,0 +1,17 @@
+User-agent: *
+
+Allow: /
+
+# Allow important folders
+Allow: /blog/
+Allow: /services/
+Allow: /about/
+Allow: /contact-us/
+Allow: /book-online/
+
+# Block system folders (optional but clean practice)
+Disallow: /js/
+Disallow: /css/
+
+# Sitemap location
+Sitemap: https://mulachapventures.com/sitemap.xml
